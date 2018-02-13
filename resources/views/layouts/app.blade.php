@@ -75,15 +75,20 @@
                     <ul class="nav navbar-nav menu">
                         &nbsp;
                         <li><a id="botonMenu" href="{{ url('/home') }}">Home</a></li>
-                        <li><a id="botonMenu" href="{{ url('/chat') }}">Chats</a></li>
-                        <li><a id="botonMenu" href="{{ url('/denuncias') }}">Denuncias</a>
-                            <ul>
-                                <li><a id="botonMenu" href="{{ url('/denuncias/crear') }}">Creare denuncia</a></li>
-                            </ul>             
+                        
+                        
+                            <li><a id="botonMenu" href="{{ url('/chat') }}">Chats</a></li>
+                            <li><a id="botonMenu" href="{{ url('/denuncias') }}">Denuncias</a>
+                                <ul>
+                                    <li><a id="botonMenu" href="{{ url('/denuncias/crear') }}">Creare denuncia</a></li>
+                                    <li><a id="botonMenu" href="{{ url('/denuncias/responder') }}">Responder denuncia</a></li>
+                                </ul>             
                             </li>               
-                        <li><a id="botonMenu" href="{{ url('/chat') }}">Debates</a></li>
-                        <li><a id="botonMenu" href="{{ url('/chat') }}">Noticias</a></li>
+                            <li><a id="botonMenu" href="{{ url('/chat') }}">Debates</a></li>
+                            <li><a id="botonMenu" href="{{ url('/chat') }}">Noticias</a></li>
+        
                     </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
