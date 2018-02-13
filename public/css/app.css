@@ -27,3 +27,14 @@ body{
 	height: 200px;
 	width: 300px;
 }
+
+.cabeceraChat{
+	background: blue; 
+	color: white;
+}
+
+#imagenUser{
+	border-radius: 80px;
+	height: 20px;
+	width: 20px;
+}
