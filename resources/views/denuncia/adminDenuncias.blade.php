@@ -20,8 +20,8 @@
               <p>{{$denuncia['created_at']}}</p>
               <p>{{$denuncia['text']}}</p>
               
-              <p>{{url('/denuncias/write/' . $denuncia['id'])}}</p>
-              <form action="{{url('/denuncias/write/' . $denuncia['id'])}}" method="post">
+              <p>{{url('/denuncias/show/' . $denuncia['id'])}}</p>
+              <form action="{{url('/denuncias/show/' . $denuncia['id'])}}" method="post">
                 <input type="hidden" name="idDenuncia" value="{{$denuncia['id']}}">
                 <input type="submit" value="Responder">
               </form>

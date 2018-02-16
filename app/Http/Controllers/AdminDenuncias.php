@@ -22,7 +22,7 @@ class AdminDenuncias extends Controller
         //
         $denuncias = Denuncia::where('id', $id )->get();
         //return view('catalog.edit', array('id'=>$id));
-        return view( 'denuncia.responderAdmin', array("arrayDenuncias"=>$denuncias, 'id'=>$id ) );
+        return view( 'denuncia.responderAdmin', ['arrayDenuncias' => $denuncias] );
 
     }
 

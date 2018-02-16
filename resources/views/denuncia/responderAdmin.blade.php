@@ -10,18 +10,7 @@
       
         <div class="container">
 
-          <div style="float: left; border-color: red;">
-              <img class="fotoDenuncia" src="{{$denuncia['imagen']}}" />
-          </div>
-
-          <div style="float: left;">
-              <p>{{$denuncia['created_at']}}</p>
-              <p>{{$denuncia['text']}}</p>
-              
-              <form action="{{url('responder/{{$denuncia['id']}}' )}}" method="post">
-                <input type="hidden" name="idDenuncia" value="{{$denuncia['id']}}">
-                <input type="submit" value="Responder">
-              </form>
+              <h1>Gil</h1>
               
           </div>
 
