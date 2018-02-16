@@ -3,10 +3,6 @@ function enviarMensaje() {
 	var mensaje = $('#mensaje').val();
 	
 	if ( mensaje != ""){
-
-		// enviar al server
-
-
 		// printa por pantalla
 		var span = $('<span ></span>');
 		$(span).append('<b>Tu: </b>');
@@ -16,8 +12,20 @@ function enviarMensaje() {
 		var li = $('<li></li>');
 		$(li).append(div);
 		$('#contenedorChat').append(li);
+
+		// enviar al server (mandar a un controlador)
+		$.ajax({
+            type: "POST",
+            url: "register",
+        });
 	}
 
 	$('#mensaje').val("");	
+}
+
+
+// FUNCION PARA LIMPIAR EL CHAT
+function limpiarChat(){
+	$('#contenedorChat').remove();
 }
 
