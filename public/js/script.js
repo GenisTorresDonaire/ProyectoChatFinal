@@ -29,3 +29,7 @@ function limpiarChat(){
 	$('#contenedorChat').remove();
 }
 
+
+function entrar(){
+	
+}

@@ -58,6 +58,7 @@ class DenunciaController extends Controller
         $a->resuelto = false;
         $a->save();
 
+        return redirect()->action('DenunciaController@index');
 
     }
 

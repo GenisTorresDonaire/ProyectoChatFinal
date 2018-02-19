@@ -10,9 +10,8 @@
       
         <div class="container">
 
-              <h1>Gil</h1>
-              
-          </div>
+                        
+        </div>
 
           <br>
         </div>

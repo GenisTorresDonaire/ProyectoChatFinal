@@ -32,7 +32,8 @@ Route::get('/denuncias/write/{id}', 'AdminDenuncias@edit')->name('editar');
 
 Route::post('denuncias', 'DenunciaController@store');
 
-Route::get('responder', 'DenunciaController@store');
-
+Route::post('responder', 'DenunciaController@store');
 
 Route::get('/chat', 'ChatController@index')->name('chat');
+
+Route::post('chat', 'ChatController@store');

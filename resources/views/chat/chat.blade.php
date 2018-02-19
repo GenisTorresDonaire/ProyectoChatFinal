@@ -11,8 +11,10 @@
             <div class="panel panel-default">
                 <div id="divAmigos" class="panel-heading cabeceraChat" style="background: blue; color: white;"><b>Chat Rooms</b></div>
                 
-                <div class="panel-body" style="min-height: 400px;">
-                    
+                <div class="panel-body" style="min-height: 400px;">     
+                  @foreach( $arrayGrupos as $key => $grupos ) 
+                    <div onclick="entrar()">{{$grupos['nom']}}</div>
+                  @endforeach
                 </div>
             </div>
         </div>
@@ -31,23 +33,18 @@
                             <h5 class="modal-title">CREA TU CHAT ROOM</h5>
                           </div>
                           <div class="modal-body">
-
-                            <form>
+                            <form action="/chat" method="POST">
+                              {{ csrf_field() }}
                                 <label>Nombre Chat Room: <input type="text" name="nombre"></label>
+                                <button type="submit" class="btn btn-primary">Crear</button>
                             </form>
-                          
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Crear</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                          </div>        
+                          </div>    
                         </div>
                       </div>
                     </div>
 
                     <div id="Chat" class="panel-body" style="min-height: 400px;">
-                        <ul id="contenedorChat" class="list-unstyled" style="text-decoration: none;">
-                            
+                        <ul id="contenedorChat" class="list-unstyled" style="text-decoration: none;">      
                         </ul>
                     </div>
                 </div>
