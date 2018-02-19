@@ -1,24 +1,32 @@
 @extends('layouts.app')
 @section('content')
-{{ Breadcrumbs::render('denuncia') }}
 
 <div class="container d-flex justify-content-center ">
   <div class="row" > 
     
     <div class="col-md-10" style="background-color: white;">
-      <h1>Denuncias Realizadas</h1>
+      <h2>Ultimas noticias</h2>
       <hr>
       
-      @foreach( $arrayDenuncias as $key => $denuncia )
+      @foreach( $arrayNoticias as $key => $noticias )
         <div class="container">
-          <div style="float: left; border-color: red;"><img class="fotoDenuncia" src="{{$denuncia['imagen']}}" /></div>
-          <div style="float: left;"><p>{{$denuncia['created_at']}}</p><p>{{$denuncia['text']}}</p></div>
-          <br>
-        </div>
+          <div class="row">
+            <div class="col-md-4"><img class="fotoDenuncia" src="{{$noticias['imagen']}}" /></div>
+              <div class="col-md-7">
+              <h1>{{$noticias['titulo']}}</h1>
+
+                <p>{{$noticias['texto']}}</p>
+                <p>{{$noticias['created_at']}}</p>
+              </div>
+
+            </div>
+            <br>
+          </div>
         <br>
-      @endforeach
+        <hr>
+     @endforeach
     
-    </div>
+        </div>
 
     <div class="col-md-2">
       <div class="panel panel-default">
@@ -32,5 +40,6 @@
 
   </div>
 </div>
+
 
 @endsection

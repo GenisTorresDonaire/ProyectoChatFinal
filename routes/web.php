@@ -21,11 +21,18 @@ Route::get('/denuncias', 'DenunciaController@index')->name('denuncias');
 
 Route::get('/denuncias/crear', 'DenunciaController@create')->name('crear');
 
+Route::get('/noticias', 'NoticiasController@index')->name('noticias');
+
+Route::get('/noticias/crear', 'NoticiasController@create')->name('crear1');
+
 Route::get('/denuncias/responder', 'AdminDenuncias@index')->name('comentar');
 
 Route::post('denuncias', 'DenunciaController@store');
 
 Route::get('responder', 'DenunciaController@store');
+
+Route::post('noticias', 'NoticiasController@store');
+
 
 
 Route::get('/chat', 'ChatController@index')->name('chat');

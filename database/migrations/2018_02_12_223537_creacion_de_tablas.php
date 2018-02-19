@@ -63,6 +63,17 @@ class CreacionDeTablas extends Migration
             $table->foreign('id_grupo')->references('id')->on('Grupos')->onDelete('cascade');
             $table->timestamps();
         });
+
+        Schema::create('Noticias', function (Blueprint $table) {
+            $table->increments('id_noticia');
+            $table->integer('id_usuario')->unsigned();
+            $table->string('imagen');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
+            $table->text('categoria');
+            $table->text('texto');
+            $table->text('titulo');
+            $table->timestamps();
+        });
     }
 
     /**

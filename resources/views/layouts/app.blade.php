@@ -85,7 +85,12 @@
                                 </ul>             
                             </li>               
                             <li><a id="botonMenu" href="{{ url('/chat') }}">Debates</a></li>
-                            <li><a id="botonMenu" href="{{ url('/chat') }}">Noticias</a></li>
+                            <li><a id="botonMenu" href="{{ url('/noticias') }}">Noticias</a>
+                                <ul>
+                                    <li><a id="botonMenu" href="{{ url('/noticias/crear') }}">Creare noticia</a></li>
+                                    
+                                </ul> 
+                            </li>
         
                     </ul>
 
@@ -127,5 +132,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/noticia.js') }}"></script>
 </body>
 </html>
