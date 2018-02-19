@@ -58,6 +58,7 @@ class DenunciaController extends Controller
         $a->resuelto = false;
         $a->save();
 
+        return redirect()->action('DenunciaController@index');
 
     }
 
@@ -67,9 +68,11 @@ class DenunciaController extends Controller
      * @param  \App\Denuncia  $denuncia
      * @return \Illuminate\Http\Response
      */
-    public function show(Denuncia $denuncia)
+    public function show(Denuncia $id)
     {
-        //
+        $denuncias = Denuncia::where('id' , '=', $id)->get()
+        return view('denuncia.responderAdmin' , $denuncias);
+
     }
 
 }

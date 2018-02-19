@@ -25,6 +25,7 @@ class CreacionDeTablas extends Migration
             $table->text('text');
             $table->string('imagen');
             $table->integer('id_usuario')->unsigned();
+            $table->text('respuesta')->nullable(true);
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
             $table->boolean('resuelto')->default(false);
             $table->timestamps();
@@ -52,7 +53,7 @@ class CreacionDeTablas extends Migration
             $table->foreign('id_grupo')->references('id')->on('Grupos')->onDelete('cascade');
             $table->text('mensaje');
             $table->integer('id_usuario')->unsigned();
-            $table->foreign('id_usuario')->references('id')->on('Grupos')->onDelete('cascade');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
         

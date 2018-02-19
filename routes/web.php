@@ -21,19 +21,26 @@ Route::get('/denuncias', 'DenunciaController@index')->name('denuncias');
 
 Route::get('/denuncias/crear', 'DenunciaController@create')->name('crear');
 
+
 Route::get('/noticias', 'NoticiasController@index')->name('noticias');
 
 Route::get('/noticias/crear', 'NoticiasController@create')->name('crear1');
 
-Route::get('/denuncias/responder', 'AdminDenuncias@index')->name('comentar');
+
+
+Route::get('/denuncias/responder', 'AdminDenuncias@index')->name('comentar1');
+
+Route::get('/denuncias/show/{id}', 'AdminDenuncias@show')->name('comentar');
+
+Route::get('/denuncias/write/{id}', 'AdminDenuncias@edit')->name('editar');
+
 
 Route::post('denuncias', 'DenunciaController@store');
 
-Route::get('responder', 'DenunciaController@store');
-
 Route::post('noticias', 'NoticiasController@store');
 
-
+Route::post('responder', 'DenunciaController@store');
 
 Route::get('/chat', 'ChatController@index')->name('chat');
 
+Route::post('chat', 'ChatController@store');

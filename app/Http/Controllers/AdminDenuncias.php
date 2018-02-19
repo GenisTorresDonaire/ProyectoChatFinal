@@ -8,31 +8,37 @@ use Illuminate\Http\Request;
 
 class AdminDenuncias extends Controller
 {
-    //
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         //$denuncias = Denuncia::All();
         $denuncias = Denuncia::All();
 
-        return view('denuncia.adminDenuncias', ['arrayDenuncias' => $denuncias] );
+        return view( 'denuncia.adminDenuncias', ['arrayDenuncias' => $denuncias] );
+    }
+
+    public function show($id)
+    {
+        //
+        $denuncias = Denuncia::where('id', $id )->get();
+        //return view('catalog.edit', array('id'=>$id));
+        return view( 'denuncia.responderAdmin', ['arrayDenuncias' => $denuncias] );
+
     }
 
     public function edit($id)
     {
         //
+        $denuncias = Denuncia::where('id', $id )->get();
+        //return view('catalog.edit', array('id'=>$id));
+        return view( 'denuncia.responderAdmin', array("arrayDenuncias"=>$denuncias, 'id'=>$id ) );
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
+    public function store(Request $request){
+
+    }
+
     public function update($id)
     {
         //
