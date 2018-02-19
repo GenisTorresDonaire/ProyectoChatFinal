@@ -30,6 +30,9 @@ function limpiarChat(){
 }
 
 
-function entrar(){
-	
+function unirse(elemento){
+	var sala = $(elemento).text();
+	//alert(sala);
+
+	window.location.replace('localhost:8000/chat/unirse/' + sala);
 }

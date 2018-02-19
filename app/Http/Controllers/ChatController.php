@@ -17,7 +17,7 @@ class ChatController extends Controller
     public function index()
     {
         $grupos = Grupos::All();
-        return view('chat.chat', ['arrayGrupos' => $grupos]);
+        return view('chat.unirse', ['arrayGrupos' => $grupos]);
     }
 
     /**
@@ -44,5 +44,12 @@ class ChatController extends Controller
         $a->save();
         
         return redirect()->action('ChatController@index');
+    }
+
+    public function unirse()
+    {
+        
+        $grupos = Grupos::All();
+        return view('chat.chat');
     }
 }
