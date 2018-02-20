@@ -46,10 +46,10 @@ class ChatController extends Controller
         return redirect()->action('ChatController@index');
     }
 
-    public function unirse()
+    public function unirse($sala)
     {
-        
-        $grupos = Grupos::All();
+        //$grupos = Grupos::All();
+
         return view('chat.chat');
     }
 }
