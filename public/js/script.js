@@ -1,8 +1,9 @@
-var salaActual;
 
 // FUNCION PARA ENVIAR MENSAJE Y PRINTARLO EN EL CHAT
 function enviarMensaje() {
 	var mensaje = $('#mensaje').val();
+	var salaActual = $('#nombreSala').text();
+
 
 	if ( mensaje != ""){
 		// printa por pantalla
@@ -15,14 +16,14 @@ function enviarMensaje() {
 		$(li).append(div);
 		$('#contenedorChat').append(li);
 
-
+		
 		// enviar al server (mandar a un controlador)
 		$.ajax({
             type: "GET",
             url: "/chat/mensaje/"+1+"/"+mensaje,
             success: function(json){
             	json = JSON.parse(json);
-                alert(json);
+                //alert(json);
             },
             error: function(){
             	alert("erroor!");
@@ -39,6 +40,30 @@ function limpiarChat(){
 	$('#contenedorChat').remove();
 }
 
+// FUNCTION PARA OBTENER LOS MENSAJES AL ENTRAR EN LA SALA
+function obtenerMensajes(){
+	// hacer una funcion con un set interval y que este escuchando al json todo el rato asi obtendremos los nuevos mensajes
+	/*
+	$.ajax({
+        type: "GET",
+        url: "/api/mensajes",
+        dataType: "json",
+        success: function(json){
+        	alert(json);
+        	json = JSON.parse(json);
+            
+        },
+        error: function(){
+        	alert("erroor!");
+        } 
+    });	
+    */
+}
+
+// FUNCTION PARA SINCRONIZAR TODO EL RATO LOS MENSAJES
+function conectado(){
+
+}
 
 function unirse(elemento){
 	var sala = $(elemento).text();

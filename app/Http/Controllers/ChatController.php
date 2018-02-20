@@ -8,34 +8,17 @@ use App\Grupos;
 use App\Mensajes;
 use Illuminate\Http\Request;
 
-class ChatController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
+class ChatController extends Controller{
+
+    public function index(){
         $grupos = Grupos::All();
         return view('chat.unirse', ['arrayGrupos' => $grupos]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create(){
         //return view('chat.chat');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request){
         $a = new Grupos();
         $a->nom = $request->input('nombre');
@@ -44,31 +27,20 @@ class ChatController extends Controller
         
         return redirect()->action('ChatController@index');
     }
-
-<<<<<<< HEAD
-    public function unirse($sala)
-    {
-        //$grupos = Grupos::All();
-
-        return view('chat.chat');
-=======
+    
     public function unirse($id){
-        //$grupos = Grupos::All();
-        return view('chat.chat')->with('id', $id);;
+        //$numeroID = Grupos::where('nom', $id )->get();
+        return view('chat.chat', ['id' => $id]);
     }
-
 
     public function guardarMensaje($sala, $mensaje){
         //
-        
         $m = new Mensajes();
         $m->id_grupo = $sala;
         $m->mensaje = $mensaje;
         $m->id_usuario = Auth::id();
         $m->save();
         
-
         return json_encode(array('sala' => $sala, 'mensaje' => $mensaje));
->>>>>>> 24b88d0ae564a8fdbe3f1872ae8282f5d8667448
     }
 }

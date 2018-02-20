@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container d-flex justify-content-center ">
+<div id="cargarMensajes" class="container d-flex justify-content-center ">
     
     <div class="row" >
       <div class="col-md-10" style="background-color: white;">
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="panel panel-default">
                     <div id="divChat" class="panel-heading cabeceraChat" style="background: blue; color: white; ">
-                      <b>Chat</b>
+                        <b id="nombreSala">{{$id}}</b>
                     </div>         
 
                     <div id="Chat" class="panel-body" style="min-height: 400px;">

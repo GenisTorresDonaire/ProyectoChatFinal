@@ -20,8 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get("mensajes", function(Request $request){
+	//$ListaMensajes = Mensajes::All();
 	$ListaMensajes = Mensajes::All();
 	return $ListaMensajes;
 });
-
-Route::post('mensajes', 'ChatController@guardarMensaje')->name('mensajes');
