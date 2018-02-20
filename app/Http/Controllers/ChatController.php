@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use App\Grupos;
+use App\Mensajes;
 use Illuminate\Http\Request;
 
 class ChatController extends Controller
@@ -25,8 +26,7 @@ class ChatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create(){
         //return view('chat.chat');
     }
 
@@ -36,8 +36,7 @@ class ChatController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $a = new Grupos();
         $a->nom = $request->input('nombre');
         $a->id_usuario = Auth::id();
@@ -46,10 +45,22 @@ class ChatController extends Controller
         return redirect()->action('ChatController@index');
     }
 
-    public function unirse()
-    {
+    public function unirse($id){
+        //$grupos = Grupos::All();
+        return view('chat.chat')->with('id', $id);;
+    }
+
+
+    public function guardarMensaje($sala, $mensaje){
+        //
         
-        $grupos = Grupos::All();
-        return view('chat.chat');
+        $m = new Mensajes();
+        $m->id_grupo = $sala;
+        $m->mensaje = $mensaje;
+        $m->id_usuario = Auth::id();
+        $m->save();
+        
+
+        return json_encode(array('sala' => $sala, 'mensaje' => $mensaje));
     }
 }

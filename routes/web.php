@@ -36,6 +36,8 @@ Route::post('responder', 'DenunciaController@store');
 Route::get('/chat', 'ChatController@index')->name('chat');
 
 // Chat al que te has unido
-Route::get('/chat/unirse/{id}', 'ChatController@unirse')->name('unrise');
+Route::get('/chat/unirse/{id}', 'ChatController@unirse')->name('unirse');
 
 Route::post('chat', 'ChatController@store');
+
+Route::get('/chat/mensaje/{id}/{mensaje}', 'ChatController@guardarMensaje')->name('mensajes');

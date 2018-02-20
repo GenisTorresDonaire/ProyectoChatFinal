@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="panel">
                     <p> 
-                    <input id="mensaje" style="width: 580px;" type="text" name="mensaje" />
+                        <input id="mensaje" style="width: 580px;" type="text" name="mensaje" />
                         <input onclick="enviarMensaje()" style="float:right;" class="btn btn-primary" type="submit" value="->" name="Eviar">
                     </p>
                 </div>

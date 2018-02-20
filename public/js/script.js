@@ -1,7 +1,9 @@
+var salaActual;
+
 // FUNCION PARA ENVIAR MENSAJE Y PRINTARLO EN EL CHAT
 function enviarMensaje() {
 	var mensaje = $('#mensaje').val();
-	
+
 	if ( mensaje != ""){
 		// printa por pantalla
 		var span = $('<span ></span>');
@@ -13,10 +15,18 @@ function enviarMensaje() {
 		$(li).append(div);
 		$('#contenedorChat').append(li);
 
+
 		// enviar al server (mandar a un controlador)
 		$.ajax({
-            type: "POST",
-            url: "register",
+            type: "GET",
+            url: "/chat/mensaje/"+1+"/"+mensaje,
+            success: function(json){
+            	json = JSON.parse(json);
+                alert(json);
+            },
+            error: function(){
+            	alert("erroor!");
+            } 
         });
 	}
 
@@ -32,7 +42,5 @@ function limpiarChat(){
 
 function unirse(elemento){
 	var sala = $(elemento).text();
-	//alert(sala);
-
-	window.location.replace('localhost:8000/chat/unirse/' + sala);
+	window.location.href = '/chat/unirse/' + sala;
 }

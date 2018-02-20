@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Mensajes;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,3 +24,4 @@ Route::get("mensajes", function(Request $request){
 	return $ListaMensajes;
 });
 
+Route::post('mensajes', 'ChatController@guardarMensaje')->name('mensajes');
