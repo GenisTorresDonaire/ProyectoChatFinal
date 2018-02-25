@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Mensajes extends Model
@@ -14,4 +15,9 @@ class Mensajes extends Model
         return $this->belongsTo('App\User');
     }
     
+
+    public function usuario()
+    {
+        return $this->belongsTo('App\User', 'name');
+    }
 }

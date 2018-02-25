@@ -24,3 +24,4 @@ Route::get("mensajes", function(Request $request){
 	$ListaMensajes = Mensajes::All();
 	return $ListaMensajes;
 });
+

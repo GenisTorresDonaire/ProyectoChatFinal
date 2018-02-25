@@ -42,3 +42,5 @@ Route::get('/chat/unirse/{id}', 'ChatController@unirse')->name('unirse');
 Route::post('chat', 'ChatController@store');
 
 Route::get('/chat/mensaje/{id}/{mensaje}', 'ChatController@guardarMensaje')->name('mensajes');
+
+Route::get('/chat/ultimosMensajes/{sala}', 'ChatController@ultimosMensajes');
