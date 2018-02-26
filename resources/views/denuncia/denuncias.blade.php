@@ -12,7 +12,10 @@
       @foreach( $arrayDenuncias as $key => $denuncia )
         <div class="container">
           <div style="float: left; border-color: red;"><img class="fotoDenuncia" src="{{$denuncia['imagen']}}" /></div>
-          <div style="float: left;"><p>{{$denuncia['created_at']}}</p><p>{{$denuncia['text']}}</p></div>
+          <div style="float: left;"><p>{{$denuncia['created_at']}}</p><p>{{$denuncia['text']}}</p>
+              <hr>
+              <p>Comentario admin : {{$denuncia['respuesta']}}</p>
+          </div>
           <br>
         </div>
         <br>

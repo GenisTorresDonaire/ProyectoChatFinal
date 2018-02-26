@@ -56,6 +56,7 @@ class NoticiasController extends Controller
         
         $a->save();
 
+        return redirect()->action('NoticiasController@index');
 
     }
 

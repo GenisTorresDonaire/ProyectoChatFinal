@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+{{ Breadcrumbs::render('chat') }}
 
 <div class="container d-flex justify-content-center ">
     

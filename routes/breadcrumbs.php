@@ -26,4 +26,16 @@ Breadcrumbs::register('crear', function ($breadcrumbs) {
     $breadcrumbs->push('Crear Denuncias', route('crear'));
 });
 
+Breadcrumbs::register('crear1', function ($breadcrumbs) {
+    $breadcrumbs->parent('noticia');
+    $breadcrumbs->push('Crear Noticia', route('crear1'));
+});
+
+
+Breadcrumbs::register('noticia', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Noticias', route('noticia'));
+});
+
+
 

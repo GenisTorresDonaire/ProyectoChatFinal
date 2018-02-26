@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+{{ Breadcrumbs::render('crear') }}
 <div class="container d-flex justify-content-center ">
     <div class="row" >
       <div class="col-md-10 offset-md-2" style="background-color: white;">

@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @section('content')
+{{ Breadcrumbs::render('crear1') }}
 
 
 <div class="container d-flex justify-content-center " >
-	<button onclick="crearFormulario()" id="botonform"> Vale</button>
+	<button onclick="crearFormulario()" id="botonform"> Crear noticia</button>
     <div class="row" >
     	<div class="col-md-10 offset-md-2" style="background-color: white;">
     		<form action="{{url('noticias')}}" method="POST" id="1" enctype="multipart/form-data">

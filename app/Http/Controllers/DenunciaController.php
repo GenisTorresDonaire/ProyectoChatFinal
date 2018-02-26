@@ -44,6 +44,7 @@ class DenunciaController extends Controller
         //
         $a = new Denuncia();
         $a->text = $request->input('textoFormulario');
+        $a->respuesta ="";
 
         //
         //$a->imagen = $request->input('imagenFormulario');
@@ -68,10 +69,16 @@ class DenunciaController extends Controller
      * @param  \App\Denuncia  $denuncia
      * @return \Illuminate\Http\Response
      */
-    public function show(Denuncia $id)
+    public function comentar(Request $request)
     {
-        $denuncias = Denuncia::where('id' , '=', $id)->get()
-        return view('denuncia.responderAdmin' , $denuncias);
+       // $a->respuesta =$request->input('comentario');
+
+        Denuncia::where('id', $request->input('id'))
+            ->update(['respuesta'=> $request->input('comentario')]);
+
+        return redirect()->action('DenunciaController@index');
+       
+        
 
     }
 

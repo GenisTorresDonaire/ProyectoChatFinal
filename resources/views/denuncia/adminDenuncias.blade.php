@@ -21,10 +21,16 @@
               <p>{{$denuncia['text']}}</p>
               
               <p>{{url('/denuncias/show/' . $denuncia['id'])}}</p>
-              <form action="{{url('/denuncias/show/' . $denuncia['id'])}}" method="post">
-                <input type="hidden" name="idDenuncia" value="{{$denuncia['id']}}">
-                <input type="submit" value="Responder">
+              <form action="{{url('/denuncias/comentar')}}" method="POST" id="a{{$denuncia['id']}}" enctype="multipart/form-data">
+               {{ csrf_field() }}
+               <input type="hidden" name="id" value="{{$denuncia['id']}}">
+                
+
               </form>
+
+               <button onclick="responder(this)" id="{{$denuncia['id']}}"> Responder </button>
+
+             
               
           </div>
 

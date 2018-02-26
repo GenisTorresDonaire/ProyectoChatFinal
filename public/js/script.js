@@ -33,3 +33,20 @@ function limpiarChat(){
 function entrar(){
 	
 }
+
+
+function responder($this){
+	var id= $this.id;
+	alert("a"+id);
+
+	var boton = document.getElementById(id);
+	boton.style.display = 'none';
+	var comentar =$("<input type='text' name='comentario'>");
+	var botonSub =$('<button type="submit" class="btn btn-primary">Enviar comentario</button>');
+	$('#a'+id).append(comentar);
+	$('#a'+id).append(botonSub);
+
+
+
+
+}
