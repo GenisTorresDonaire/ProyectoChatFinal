@@ -28,9 +28,10 @@ class ChatController extends Controller{
         return redirect()->action('ChatController@index');
     }
     
-    public function unirse($id){
-        //$numeroID = Grupos::where('nom', $id )->get();
-        return view('chat.chat', ['id' => $id]);
+    public function unirse($nom){
+
+        $numeroID = Grupos::where('nom', $nom )->select('id')->get();
+        return view('chat.chat', ['nom' => $nom, 'id' => $numeroID[0]["id"]] );
     }
 
     public function guardarMensaje($sala, $mensaje){
@@ -67,10 +68,23 @@ class ChatController extends Controller{
                 ->get();
         }
 
-        // SELECT m.id_grupo, m.mensaje, u.name FROM Mensajes m, users u WHERE m.id_grupo=1 and m.id_usuario=1 and u.id=m.id_usuario 
+        // VUELTA DEL JSON CON LOS DATOS
+        return json_encode($mensajes);   
+    }
+
+
+    // funcion devuelve 
+    public function actualizacionChat($sala, $hora){
+
+        // OBTENCION DE LOS MENSAJES DE LA ULTIMA HORA
+        $mensajes = Mensajes::with('usuario')
+            ->where('id_grupo', $sala)
+            ->where('created_at', '>', $hora)
+            ->orderBy('created_at', 'DESC')
+            ->get();   
 
         // VUELTA DEL JSON CON LOS DATOS
-        return json_encode($mensajes);
-        
+        return json_encode($mensajes);   
     }
+
 }

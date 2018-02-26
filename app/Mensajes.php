@@ -15,9 +15,8 @@ class Mensajes extends Model
         return $this->belongsTo('App\User');
     }
     
-
     public function usuario()
     {
-        return $this->belongsTo('App\User', 'name');
+        return $this->belongsTo('App\User', 'id_usuario');
     }
 }

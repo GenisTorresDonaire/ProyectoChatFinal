@@ -1,6 +1,12 @@
 @extends('layouts.app')
-@section('content')
 
+@section('head')
+<script>
+    var chatid = {{$id}};
+</script>
+@endsection
+
+@section('content')
 <div id="cargarMensajes" class="container d-flex justify-content-center ">
     
     <div class="row" >
@@ -15,7 +21,8 @@
             <div class="row">
                 <div class="panel panel-default">
                     <div id="divChat" class="panel-heading cabeceraChat" style="background: blue; color: white; ">
-                        <b id="nombreSala">{{$id}}</b>
+                        <b id="nombreSala">{{$nom}}</b>
+
                     </div>         
 
                     <div id="Chat" class="panel-body" style="min-height: 400px;">
