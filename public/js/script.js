@@ -100,7 +100,7 @@ function unirse(elemento){
 
 // FUNCTION PARA SINCRONIZAR TODO EL RATO LOS MENSAJES
 setInterval( function actualizar(){
-
+    alert("hola");
 	$.ajax({
         type: "GET",
         url: "/chat/actualizar/"+sala+"/"+hora,
