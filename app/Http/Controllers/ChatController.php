@@ -56,14 +56,14 @@ class ChatController extends Controller{
         $mensajes = Mensajes::with('usuario')
             ->where('id_grupo', $sala)
             ->where('created_at', '>', $fecha)
-            ->orderBy('created_at', 'DESC')
+            ->orderBy('created_at', 'ASC')
             ->get();
         
         // SI EN LA ULTIMA HORA NO HAY NINGUN MENSAJE CARGA LOS ULTIMOS 20
         if(count($mensajes) == 0) {
             $mensajes = Mensajes::with('usuario')
                 ->where('id_grupo', $sala)
-                ->orderBy('created_at', 'DESC')
+                ->orderBy('created_at', 'ASC')
                 ->limit(20)
                 ->get();
         }
@@ -80,7 +80,7 @@ class ChatController extends Controller{
         $mensajes = Mensajes::with('usuario')
             ->where('id_grupo', $sala)
             ->where('created_at', '>', $hora)
-            ->orderBy('created_at', 'DESC')
+            ->orderBy('created_at', 'ASC')
             ->get();   
 
         // VUELTA DEL JSON CON LOS DATOS
