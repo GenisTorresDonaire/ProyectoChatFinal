@@ -84,10 +84,11 @@
                             <li><a id="botonMenu" href="{{ url('/denuncias') }}">Denuncias</a>
                                 <ul>
                                     <li><a id="botonMenu" href="{{ url('/denuncias/crear') }}">Creare denuncia</a></li>
+      
+                                @if( Auth::user() && Auth::user()->rol == 'Admin' )
+                                    <li><a id="botonMenu" href="{{ url('/denuncias/responder') }}">Responder denuncia</a></li>
+                                @endif
 
-                                    <!-- @if( Auth::user()->rol == 'admin') -->  
-                                        <li><a id="botonMenu" href="{{ url('/denuncias/responder') }}">Responder denuncia</a></li>
-                                    <!-- @endif -->
                                 </ul>             
                             </li>               
                             <li><a id="botonMenu" href="{{ url('/chat') }}">Debates</a></li>
