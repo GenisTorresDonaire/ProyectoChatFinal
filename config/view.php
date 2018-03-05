@@ -30,8 +30,5 @@ return [
 
     'compiled' => realpath(storage_path('framework/views')),
 
-<<<<<<< HEAD
-=======
     'view' => 'breadcrumbs::bootstrap4',
->>>>>>> d7e44d8f84da5f8fe7df22dbd6580719ca5f1a19
 ];

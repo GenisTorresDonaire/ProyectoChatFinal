@@ -3,6 +3,8 @@ var coloresAsignados = {};
 var salaActual = chatid;
 var hora;
 
+
+
 // FUNCION PARA ENVIAR MENSAJE Y PRINTARLO EN EL CHAT
 function enviarMensaje() {
 	var mensaje = $('#mensaje').val();
@@ -22,11 +24,6 @@ function enviarMensaje() {
     });
 
 	$('#mensaje').val("");
-
-    if( hora == null ){
-        obtenerHora();
-    }
-    
 }
 
 
@@ -61,7 +58,7 @@ function obtenerMensajes(){
         url: "/chat/ultimosMensajes/"+chatid,
         success: function(json){
         	json = JSON.parse(json);
-        	longitudJSON = json.length;
+            longitudJSON = json.length;
 
         	for(var item=0; item < json.length; item++){
         		mensaje = json[item]['mensaje'];
@@ -74,6 +71,7 @@ function obtenerMensajes(){
         		// printa por pantalla
 				var span = $('<span ></span>');
 				$(span).append('<b style="color:'+estilo+'">'+name+'</b>');
+                $(span).append('<br>');
                 $(span).append(mensaje);
 				
                 if ( name == usuarioActual ){
@@ -95,6 +93,8 @@ function obtenerMensajes(){
         	alert("erroor!");
         } 
     });	
+
+    obtenerHora();
 }
 
 
@@ -110,6 +110,7 @@ setInterval(ajaxCall, 1000);
 
 function ajaxCall() {
     ///alert(salaActual);
+    //alert("Hora de ajaxCall " + (hora == null) );
 
     $.ajax({
         type: "GET",
@@ -167,8 +168,10 @@ function obtenerHora(){
         dia = "0"+d.getDate()
     }
 
-    var fecha = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() + "_" + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    var fecha = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate() + "_" + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     hora = fecha;
+
+    //alert("horaaaaaa asginada: " + hora);
 }
 
 
