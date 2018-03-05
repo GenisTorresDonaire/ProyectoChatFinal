@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Mensajes;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get("mensajes", function(Request $request){
+	//$ListaMensajes = Mensajes::All();
 	$ListaMensajes = Mensajes::All();
 	return $ListaMensajes;
 });
