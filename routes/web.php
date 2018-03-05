@@ -20,11 +20,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //////////////////////// DENUNCIAS
 
-<<<<<<< HEAD
 Route::post('/denuncias/comentar', 'DenunciaController@comentar')->name('crear');
-=======
+
 Route::get('/denuncias', 'DenunciaController@index')->name('denuncias');
->>>>>>> 71ba5691966fe7181222eb9eccd2b6b04bdd37fa
+
 
 Route::get('/denuncias/crear', 'DenunciaController@create')->name('crear');
 

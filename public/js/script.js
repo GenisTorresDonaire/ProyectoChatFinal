@@ -36,12 +36,6 @@ function limpiarChat(){
 }
 
 
-<<<<<<< HEAD
-function entrar(){
-	
-}
-
-
 function responder($this){
 	var id= $this.id;
 	alert("a"+id);
@@ -52,12 +46,8 @@ function responder($this){
 	var botonSub =$('<button type="submit" class="btn btn-primary">Enviar comentario</button>');
 	$('#a'+id).append(comentar);
 	$('#a'+id).append(botonSub);
-
-
-
-
 }
-=======
+
 // FUNCTION PARA OBTENER LOS MENSAJES AL ENTRAR EN LA SALA
 $("cargarMensajes").ready( obtenerMensajes() );
 
@@ -203,4 +193,4 @@ function buscarColor(){
         return color;   
     }
 }
->>>>>>> 71ba5691966fe7181222eb9eccd2b6b04bdd37fa
+

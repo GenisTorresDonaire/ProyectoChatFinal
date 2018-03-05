@@ -1,9 +1,7 @@
 @extends('layouts.app')
-<<<<<<< HEAD
+
 @section('content')
 {{ Breadcrumbs::render('chat') }}
-=======
->>>>>>> 71ba5691966fe7181222eb9eccd2b6b04bdd37fa
 
 @section('head')
 <script>

@@ -92,28 +92,25 @@
                                 </ul>             
                             </li>               
                             <li><a id="botonMenu" href="{{ url('/chat') }}">Debates</a></li>
-<<<<<<< HEAD
-
                             <li><a id="botonMenu" href="{{ url('/noticias') }}">Noticias</a>
+                                @if( Auth::user() && Auth::user()->rol == 'Admin' )
                                 <ul>
-                                    <li><a id="botonMenu" href="{{ url('/noticias/crear') }}">Creare noticia</a></li>
-                                    
+                                    <li><a id="botonMenu" href="{{ url('/noticias/crear') }}">Crear noticia</a></li>
                                 </ul> 
+                                @endif
                             </li>
-        
-                    </ul>
-                           
-=======
+                        </ul>
+
                             <li><a id="botonMenu" href="{{ url('/chat') }}">Noticias</a></li>
                         @endif
                         </ul>
->>>>>>> 71ba5691966fe7181222eb9eccd2b6b04bdd37fa
 
 
                         <!-- Right Side Of Navbar -->
                         <ul class="nav navbar-nav navbar-right">
                             <!-- Authentication Links -->
                             @guest
+                                <li><a id="botonMenu" href="{{ url('/noticias') }}">Noticias</a>
                                 <li><a href="{{ route('login') }}">Login</a></li>
                                 <li><a href="{{ route('register') }}">Register</a></li>
                             @else
