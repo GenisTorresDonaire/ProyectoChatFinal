@@ -6,6 +6,10 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+<<<<<<< HEAD
+=======
+        "davejamesmiller/laravel-breadcrumbs": "^4.2",
+>>>>>>> d7e44d8f84da5f8fe7df22dbd6580719ca5f1a19
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0"
