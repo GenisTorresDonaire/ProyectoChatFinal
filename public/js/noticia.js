@@ -24,15 +24,17 @@ function crearFormulario() {
 	ttic.append('<label for="exampleInputFile">Vincula alguna imagen</label>');
 	ttic.append('<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="imagenFormulario">');
 	
+	ttic.append('<label for="exampleTextarea">Noticia importante :</label>');
+	ttic.append('<input type=radio id="importante" name="imp" value="0">Si</input>');	
+	ttic.append('<input type=radio id="importante" name="imp" value="1">No</input>');
+	
 	$('#1').append(ttic);
-	ttic.append('<label for="exampleTextarea">Categoria de la noticia</label>')
-	ttic.append(select);
-	select.append('<option value="deportes"    >Deportes</option>');
-	select.append('<option value="economia"    >Economia</option>');
-	select.append('<option value="tecnologia"  >Tecnologia</option>');
-	select.append('<option value="politica"    >Politica</option>');
-	select.append('<option value="otros"        >Otros</option>');
-	$('#1').append('<button type="submit" class="btn btn-primary">Enviar noticia</button>')
+	ttic.append('<label for="exampleTextarea">Categoria de la noticia</label>');
+	ttic.append('<input type="text" class="form-control-file" id="categoria" name="categorias">');
+
+
+
+	$('#1').append('<button type="submit" class="btn btn-primary">Enviar noticia</button>');
 
 
 

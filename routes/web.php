@@ -26,6 +26,10 @@ Route::post('/denuncias/comentar', 'DenunciaController@comentar')->name('crear')
 
 Route::get('/noticias', 'NoticiasController@index')->name('noticia');
 
+
+
+Route::post('noticias1', 'NoticiasController@categoria');
+
 Route::get('/noticias/crear', 'NoticiasController@create')->name('crear1');
 
 

@@ -19,25 +19,7 @@
             <small id="fileHelp" class="form-text text-muted">Vincula alguna imagen.</small>
           </div>
           <fieldset class="form-group">
-              <legend>Nivel de urgencia</legend>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="bajo" checked>
-                  Bajo
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="medio" checked>
-                  Medio
-                </label>
-              </div>
-              <div class="form-check">
-              <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="alto">
-                  Urgente
-                </label>
-              </div>  
+              <div id="map"></div>
               <button type="submit" class="btn btn-primary">Enviar denuncia</button>
             </fieldset>
             
@@ -54,6 +36,9 @@
                 </div>
             </div>
         </div>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxo93yvVKCbGw4b71zF5ZYDcfn_BD34gY&callback=initMap">
+        </script>
     </div>
 </div>
 @endsection

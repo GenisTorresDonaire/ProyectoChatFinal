@@ -26,6 +26,7 @@ class CreacionDeTablas extends Migration
             $table->string('imagen');
             $table->integer('id_usuario')->unsigned();
             $table->text('respuesta');
+            $table->string('ubicacion');
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
             $table->boolean('resuelto')->default(false);
             $table->timestamps();
@@ -73,6 +74,7 @@ class CreacionDeTablas extends Migration
             $table->text('categoria');
             $table->text('texto');
             $table->text('titulo');
+            $table->integer('importante');
             $table->timestamps();
         });
     }
