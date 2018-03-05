@@ -75,25 +75,27 @@
                     </div>
 
                     <div class="collapse navbar-collapse" id="app-navbar-collapse">
-
-                        <!-- Left Side Of Navbar -->
+                        
+                            <!-- Left Side Of Navbar -->
                         <ul class="nav navbar-nav menu">
                             &nbsp;
+                        @if( Auth::user() )
                             <li><a id="botonMenu" href="{{ url('/home') }}">Home</a></li>                        
                             <li><a id="botonMenu" href="{{ url('/chat') }}">Chats</a></li>
                             <li><a id="botonMenu" href="{{ url('/denuncias') }}">Denuncias</a>
                                 <ul>
                                     <li><a id="botonMenu" href="{{ url('/denuncias/crear') }}">Creare denuncia</a></li>
-      
+          
                                 @if( Auth::user() && Auth::user()->rol == 'Admin' )
                                     <li><a id="botonMenu" href="{{ url('/denuncias/responder') }}">Responder denuncia</a></li>
                                 @endif
-
                                 </ul>             
                             </li>               
                             <li><a id="botonMenu" href="{{ url('/chat') }}">Debates</a></li>
                             <li><a id="botonMenu" href="{{ url('/chat') }}">Noticias</a></li>
+                        @endif
                         </ul>
+
 
                         <!-- Right Side Of Navbar -->
                         <ul class="nav navbar-nav navbar-right">

@@ -62,16 +62,21 @@ function obtenerMensajes(){
         		// printa por pantalla
 				var span = $('<span ></span>');
 				$(span).append('<b style="color:'+estilo+'">'+name+'</b>');
-				$(span).append('<br>');
-				$(span).append(mensaje);
-				var div = $('<div></div>');
-				$(div).append(span);
+                $(span).append(mensaje);
+				
+                if ( name == usuarioActual ){
+                    var div = $('<div style="float:right; text-align:left; border: 1px solid black; border-radius: 3px; background-color: white; padding: 5px 5px 5px 5px; min-width: 100px; margin-top: 5px;"></div>')
+                }else{
+                    var div = $('<div style="float:left; text-align:left; border: 1px solid black; border-radius: 3px; background-color: white; padding: 5px 5px 5px 5px; min-width: 100px;  margin-top: 5px;"></div>');
+                }
+                
+                $(div).append(span);
+                var div2 = $('<div style="display: block; height: auto; overflow:auto; min-width: 100%;"></div>');
+                $(div2).append(div);
 				var li = $('<li></li>');
-				$(li).append(div);
-				$('#contenedorChat').append(li);
+				$(li).append(div2);
+                $('#contenedorChat').append(li);
         	}
-
-            //alert("Ultimooo mensaje: " + hora);
 
         },
         error: function(){
@@ -115,10 +120,19 @@ function ajaxCall() {
                 $(span).append('<b style="color:'+estilo+'">'+name+'</b>');
                 $(span).append('<br>');
                 $(span).append(mensaje);
-                var div = $('<div style="float:right"></div>');
+                
+                if ( name == usuarioActual ){
+                    var div = $('<div style="float:right; text-align:left; border: 1px solid black; border-radius: 3px; background-color: white; padding: 5px 5px 5px 5px; min-width: 100px; margin-top: 5px;"></div>')
+                }else{
+                    var div = $('<div style="float:left; text-align:left; border: 1px solid black; border-radius: 3px; background-color: white; padding: 5px 5px 5px 5px; min-width: 100px;  margin-top: 5px;"></div>');
+                }
+                
                 $(div).append(span);
+                var div2 = $('<div style="display: block; height: auto; overflow:auto; min-width: 100%;"></div>');
+                $(div2).append(div);
                 var li = $('<li></li>');
-                $(li).append(div);
+                $(li).append(div2);
+                $(li).append('<br>');
                 $('#contenedorChat').append(li);
             }
         },

@@ -29,9 +29,9 @@ class ChatController extends Controller{
     }
     
     public function unirse($nom){
-
+        //$usuarioActual = Users::where('name', )->select('name')->get();
         $numeroID = Grupos::where('nom', $nom )->select('id')->get();
-        return view('chat.chat', ['nom' => $nom, 'id' => $numeroID[0]["id"]] );
+        return view('chat.chat', ['nom' => $nom, 'id' => $numeroID[0]["id"], 'usuarioActual' => Auth::user()->name ] );
     }
 
     public function guardarMensaje($sala, $mensaje){

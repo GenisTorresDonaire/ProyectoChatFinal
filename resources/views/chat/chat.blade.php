@@ -3,6 +3,7 @@
 @section('head')
 <script>
     var chatid = {{$id}};
+    var usuarioActual = "{{$usuarioActual}}";
 </script>
 @endsection
 
@@ -25,8 +26,8 @@
 
                     </div>         
 
-                    <div id="Chat" class="panel-body" style="min-height: 400px;">
-                        <ul id="contenedorChat" class="list-unstyled" style="text-decoration: none;">      
+                    <div id="Chat" class="panel-body" style="min-height: 400px; background-image: url('http://www.musicarelajante.org/wp-content/uploads/2014/09/lluvia-sonidos-naturaleza-relajantes.jpg'); overflow-y: scroll; max-height: 400px;">
+                        <ul id="contenedorChat" class="list-unstyled" style="text-decoration: none; display: block; ">      
                         </ul>
                     </div>
                 </div>
