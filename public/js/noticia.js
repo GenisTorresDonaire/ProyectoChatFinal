@@ -27,8 +27,9 @@ function crearFormulario() {
 	ttic.append('<label for="exampleTextarea">Noticia importante :</label>');
 	ttic.append('<input type=radio id="importante" name="imp" value="0">Si</input>');	
 	ttic.append('<input type=radio id="importante" name="imp" value="1">No</input>');
-	
+	ttic.append('<br>');
 	$('#1').append(ttic);
+
 	ttic.append('<label for="exampleTextarea">Categoria de la noticia</label>');
 	ttic.append('<input type="text" class="form-control-file" id="categoria" name="categorias">');
 

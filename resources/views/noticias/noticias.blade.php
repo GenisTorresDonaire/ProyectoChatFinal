@@ -31,10 +31,10 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-4"><img class="fotoDenuncia" src="{{$noticias['imagen']}}" /></div>
-                  <div class="col-md-7">
+                  <div class="col-md-5">
                   <h1>{{$noticias['titulo']}}</h1>
 
-                    <p>{{$noticias['texto']}}</p>
+                    <p style="word-wrap: break-word;">{{$noticias['texto']}}</p>
                     <p>{{$noticias['created_at']}}</p>
                   </div>
 
@@ -50,10 +50,10 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-4"><img class="fotoDenuncia" src="{{$noticias['imagen']}}" /></div>
-                  <div class="col-md-7">
+                  <div class="col-md-5">
                   <h1>{{$noticias['titulo']}}</h1>
 
-                    <p>{{$noticias['texto']}}</p>
+                    <p style="word-wrap: break-word;">{{$noticias['texto']}}</p>
                     <p>{{$noticias['created_at']}}</p>
                   </div>
 
@@ -73,10 +73,10 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-4"><img class="fotoDenuncia" src="{{$noticias['imagen']}}" /></div>
-                  <div class="col-md-7">
+                  <div class="col-md-5">
                   <h1>{{$noticias['titulo']}}</h1>
 
-                    <p>{{$noticias['texto']}}</p>
+                    <p style="word-wrap: break-word;">{{$noticias['texto']}}</p>
                     <p>{{$noticias['created_at']}}</p>
                   </div>
 
@@ -93,10 +93,10 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-4"><img class="fotoDenuncia" src="{{$noticias['imagen']}}" /></div>
-                  <div class="col-md-7">
+                  <div class="col-md-5">
                   <h1>{{$noticias['titulo']}}</h1>
 
-                    <p>{{$noticias['texto']}}</p>
+                    <p style="word-wrap: break-word;">{{$noticias['texto']}}</p>
                     <p>{{$noticias['created_at']}}</p>
                   </div>
 

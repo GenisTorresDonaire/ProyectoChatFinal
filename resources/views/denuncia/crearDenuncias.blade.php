@@ -19,10 +19,10 @@
             <small id="fileHelp" class="form-text text-muted">Vincula alguna imagen.</small>
           </div>
           <fieldset class="form-group">
-              <div id="map"></div>
-              <input id="imagenMap" type="hidden" name="imagenUbicacion" value="">
-              <button type="submit" class="btn btn-primary">Enviar denuncia</button>
-            </fieldset>
+            <div id="map"></div>
+            <!-- <input id="ubicacion" type="hidden" name="ubicacion" value="localizacion"> -->
+            <button type="submit" class="btn btn-primary">Enviar denuncia</button>
+          </fieldset>
             
         </form>
 

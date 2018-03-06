@@ -35,7 +35,7 @@ function limpiarChat(){
 
 function responder($this){
 	var id= $this.id;
-	alert("a"+id);
+	//alert("a"+id);
 
 	var boton = document.getElementById(id);
 	boton.style.display = 'none';

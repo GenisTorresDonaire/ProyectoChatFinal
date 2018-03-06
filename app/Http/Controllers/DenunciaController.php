@@ -44,6 +44,7 @@ class DenunciaController extends Controller
         //
         $a = new Denuncia();
         $a->text = $request->input('textoFormulario');
+        $a->ubicacion = "localizacion";
         $a->respuesta ="";
 
         //
