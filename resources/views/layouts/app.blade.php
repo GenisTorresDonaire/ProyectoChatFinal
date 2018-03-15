@@ -91,7 +91,7 @@
                                     @endif
                                     </ul>             
                                 </li>               
-                                <li><a id="botonMenu" href="{{ url('/chat') }}">Debates</a></li>
+                                <li><a id="botonMenu" href="{{ url('/irNoticiasExamen') }}">ExamenM6</a></li>
                             @endif
 
                                 <li><a id="botonMenu" href="{{ url('/noticias') }}">Noticias</a>
@@ -147,6 +147,7 @@
         <script src="{{ asset('js/denuncia.js') }}"></script>
         <script src="{{ asset('js/script.js') }}"></script>
         <script src="{{ asset('js/noticia.js') }}"></script>
+        <script src="{{ asset('js/ExamenM6.js') }}"></script>
     </body>
 
 </html>

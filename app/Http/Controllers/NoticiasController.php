@@ -101,7 +101,7 @@ class NoticiasController extends Controller
 
 
 
-        public function categoria(Request $request)
+    public function categoria(Request $request)
     {
         //$denuncias = Denuncia::All();
        
@@ -133,5 +133,20 @@ class NoticiasController extends Controller
        
     }
 
+    public function irNoticiasExamen(Request $request)
+    {
+        
+        return view('noticias.ExamenM6');
+
+    }
+
+    public function noticiasExamen(Request $request)
+    {
+        $noticias = Noticias::orderBy('created_at', 'desc')->get();
+
+
+        return json_encode($noticias);
+
+    }
 }
 

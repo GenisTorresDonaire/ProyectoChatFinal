@@ -33,6 +33,11 @@ Route::get('/denuncias/crear', 'DenunciaController@create')->name('crear');
 
 Route::get('/noticias', 'NoticiasController@index')->name('noticia');
 
+// EXAMEN M6
+// ir a noticiasExamen
+Route::get('/irNoticiasExamen', 'NoticiasController@irNoticiasExamen')->name('ExamenM6');
+// pedir noticias
+Route::get('/noticiasExamen', 'NoticiasController@noticiasExamen');
 
 
 Route::post('noticias1', 'NoticiasController@categoria');

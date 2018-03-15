@@ -37,5 +37,10 @@ Breadcrumbs::register('noticia', function ($breadcrumbs) {
     $breadcrumbs->push('Noticias', route('noticia'));
 });
 
+Breadcrumbs::register('ExamenM6', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('ExamenM6', route('ExamenM6'));
+});
+
 
 

@@ -42,3 +42,72 @@ body{
 #map{
 	height: 300px;
 }
+
+
+#menu{
+	width: 100%;
+}
+
+#divBotones{
+	float: right;
+}
+
+.contenedorNoticiaMosaico{
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	display: inline-block;
+	width: 48%;
+	margin-left: 5px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+.contenedorNoticiaListado{
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	width: 100%;
+	word-wrap: break-word;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.textoListado{
+	width: 100%;
+	text-align: left;
+	padding: 20px 20px 10px;
+}
+
+.imagenListado{
+	width: 100%;
+	text-align: center;
+	padding: 20px 20px;
+}
+
+.tituloListado{
+	width: 100%;
+	text-align: center;
+	color: black;
+}
+
+.textoMosaico{
+	width: 100%;
+	height: 100px;
+	text-align: left;
+	padding: 20px 20px;
+}
+
+.imagenMosaico{
+	width: 100%;
+	height: 250px;
+	text-align: center;
+	padding: 20px 20px;
+}
+
+.tituloMosaico{
+	width: 100%;
+	height: 50px;
+	color: black;
+	text-align: center;
+}
+
+
