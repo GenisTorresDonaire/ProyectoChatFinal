@@ -15,7 +15,8 @@
         <link href="{{ asset('images/pageLoader.gif') }}" rel="stylesheet">
         
         <style type="text/css">
-                
+
+ 
             ul.menu{
                 list-style: none;
             }
@@ -53,9 +54,9 @@
         </script>
     </head>
 
-    <body>
+    <body id="example">
         <div class="loader"></div>
-        <div id="app">
+        <div id="app" class="app">
             <nav class="navbar navbar-default navbar-static-top">
                 <div class="container">
                     <div class="navbar-header">
@@ -74,7 +75,7 @@
                         </a>
                     </div>
 
-                    <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <div class="collapse navbar-collapse caption" id="app-navbar-collapse">
                         
                             <!-- Left Side Of Navbar -->
                         <ul class="nav navbar-nav menu">
@@ -94,6 +95,8 @@
                                 <li><a id="botonMenu" href="{{ url('/chat') }}">Debates</a></li>
                             @endif
 
+
+
                                 <li><a id="botonMenu" href="{{ url('/noticias') }}">Noticias</a>
                                     @if( Auth::user() && Auth::user()->rol == 'Admin' )
                                     <ul>
@@ -103,6 +106,7 @@
                                 </li>
                             
                         
+
                         </ul>
 
 
@@ -147,6 +151,13 @@
         <script src="{{ asset('js/denuncia.js') }}"></script>
         <script src="{{ asset('js/script.js') }}"></script>
         <script src="{{ asset('js/noticia.js') }}"></script>
+        <script src="{{ asset('js/velocity.min.js') }}"></script>
+        <script src="{{ asset('js/velocity.ui.js') }}"></script>
+        <script src="{{ asset('js/vel.js') }}"></script>
+        
+
+
+
     </body>
 
 </html>
